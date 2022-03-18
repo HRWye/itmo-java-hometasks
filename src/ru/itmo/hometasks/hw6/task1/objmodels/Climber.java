@@ -1,7 +1,7 @@
 package ru.itmo.hometasks.hw6.task1.objmodels;
 public class Climber {
-    public String name;
-    public String address;
+    private String name;
+    private String address;
 
 
     public void setName(String name) {
