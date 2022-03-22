@@ -40,10 +40,7 @@ public class Mountain {
 
     public Mountain(String title, String country, int high) {
         setTitle(title);
-        this.title = title;
         setCountry(country);
-        this.country = country;
         setHigh(high);
-        this.high = high;
     }
 }
