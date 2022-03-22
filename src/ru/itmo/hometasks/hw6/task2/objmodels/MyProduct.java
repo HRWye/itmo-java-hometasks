@@ -2,6 +2,11 @@ package ru.itmo.hometasks.hw6.task2.objmodels;
 
 public class MyProduct {
     private String name;
+    private final int maxProtein=15;
+    private final int maxFat=10;
+    private final int maxCarbo=100;
+    private final int maxCal=700;
+
     public String getName() {
         return name;
     }
@@ -14,19 +19,19 @@ public class MyProduct {
         this.name = name;
     }
 
-    private Product[] products=new Product[3];
+    private Product[] products=new Product[4];
     public void addProduct(Product product){
         for (int i=0; i<products.length;i++){
-            if (product.getProtein()>15){
+            if (product.getProtein()>maxProtein){
                 throw new IllegalArgumentException("Белков должно быть меньше 15");
             }
-            if (product.getFat()>10){
+            if (product.getFat()>maxFat){
                 throw new IllegalArgumentException("Жиров должно быть меньше 10");
             }
-            if (product.getCarbo()>100){
+            if (product.getCarbo()>maxCarbo){
                 throw new IllegalArgumentException("Углеводов должно быть меньше 100");
             }
-            if (product.getCal()>700){
+            if (product.getCal()>maxCal){
                 throw new IllegalArgumentException("Калорий должно быть меньше 700");
             }
             if (products[i]==null){
@@ -34,13 +39,19 @@ public class MyProduct {
                 return;
             }
         }
-        System.out.println("Рацион полон");
+        throw new IllegalArgumentException("Рацион полон, удалите часть продуктов");
     }
     public void addProduct(Product...products){
-        System.out.println("Рацион "+ getName()+": ");
         for (Product product:products){
             addProduct(product);
-            System.out.println("Продукт: "+product.getName()+" белков - "+product.getProtein()+", жиров - "+product.getFat()+", углеводов - "+product.getCarbo()+",калорий - "+product.getCal());
+        }
+    }
+
+    public void productsList(){
+        System.out.println("Рацион "+ getName()+": ");
+        for (Product product:products){
+            if (product!=null){
+            System.out.println("Продукт: "+product.getName()+" белков - "+product.getProtein()+", жиров - "+product.getFat()+", углеводов - "+product.getCarbo()+",калорий - "+product.getCal());}
         }
     }
 }
