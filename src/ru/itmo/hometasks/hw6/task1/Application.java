@@ -4,7 +4,6 @@ import ru.itmo.hometasks.hw6.task1.objmodels.Group;
 import ru.itmo.hometasks.hw6.task1.objmodels.Mountain;
 public class Application {
     public static void main(String[] args) {
-
       Climber climber1 = new Climber("Ivan", "Moscow");
       Climber climber2 = new Climber("Mike", "Texas");
       Climber climber3 = new Climber("Alexander", "Saint-Petersburg");

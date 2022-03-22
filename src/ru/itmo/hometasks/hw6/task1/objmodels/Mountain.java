@@ -31,8 +31,8 @@ public class Mountain {
         if (high < 100) {
             throw new IllegalArgumentException("Высота горы должна быть не менее 100 метров");
         }
-        this.high = high;
-    }
+        this.high = high;}
+
     public int getHigh() {
         return high;
     }

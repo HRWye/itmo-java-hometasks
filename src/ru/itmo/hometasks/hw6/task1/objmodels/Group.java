@@ -22,8 +22,7 @@ public class Group {
                 climbers[i]=climber;
                 System.out.print(climber.getNameAndAddress()+"; ");
                 return;
-            }
-        }
+            }}
         System.out.println("Набор закрыт, группа для восхождения на гору "+mountain.getTitle()+" полная. В группе максимальное количество мест: "+climbers.length+". Удалите необходимое количество участников, для начала восхождения.");
     }
     public void addClimber(Climber...climbers){
