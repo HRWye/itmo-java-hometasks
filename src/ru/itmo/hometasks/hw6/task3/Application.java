@@ -1,7 +1,4 @@
 package ru.itmo.hometasks.hw6.task3;
-
-import java.util.Arrays;
-
 public class Application {
     public static void main(String[] args) {
        Mouse mouse1 = new Mouse(15);

@@ -1,7 +1,5 @@
 package ru.itmo.hometasks.hw6.task3;
 
-import java.util.Arrays;
-
 public class Cat extends Mouse{
     private String name;
     private int weight;
