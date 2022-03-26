@@ -10,3 +10,4 @@ public class Student extends Worker {
         setLevelOfKnowledge(Math.min((int)(Math.random()*teacher.getLevelOfKnowledge()+getLevelOfKnowledge()),teacher.getLevelOfKnowledge()));
     }
 }
+

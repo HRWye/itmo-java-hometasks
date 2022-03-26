@@ -9,3 +9,4 @@ public class Teacher extends Worker {
         if (getLesson().equals(student.getLesson())){student.learning(this);}
     }
 }
+

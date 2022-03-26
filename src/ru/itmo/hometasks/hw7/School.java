@@ -10,6 +10,7 @@ public class School {
         return title;
     }
 
+
     public School(String title, Director director) {
         if (title==null||title.length()<=2){throw new IllegalArgumentException("Название школы должно состоять более чем из 2 символов");}
         this.title = title;

@@ -12,6 +12,7 @@ public class Worker extends Human{
         this.lesson = lesson;
     }
 
+
     public int getLevelOfKnowledge() {
         return levelOfKnowledge;
     }

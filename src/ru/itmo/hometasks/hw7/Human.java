@@ -12,6 +12,7 @@ public class Human {
         this.name = name;
     }
 
+
     public void setAge(int age) {
         if (age<=5){throw new IllegalArgumentException("Возраст должен быть числом не меньше 6");}
         this.age = age;

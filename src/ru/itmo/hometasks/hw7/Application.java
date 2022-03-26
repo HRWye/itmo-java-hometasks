@@ -17,4 +17,5 @@ public class Application {
 
         school.newDayAtSchool();
     }
+
 }

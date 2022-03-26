@@ -9,6 +9,7 @@ public class Director extends Human{
         System.out.println(getName()+" объявляет начало занятий");
     }
 
+
     public void setEndOfTheLessons(){
         System.out.println(getName()+" объявляет конец занятий");
     }
