@@ -1,4 +1,4 @@
-package hw1;
+package ru.itmo.hometasks.hw1;
 public class Task4 {
     public static void main(String[] args) {
         //4. Объяснить причину ошибок.

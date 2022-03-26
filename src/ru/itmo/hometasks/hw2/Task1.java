@@ -1,4 +1,4 @@
-package hw2;
+package ru.itmo.hometasks.hw2;
 import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {

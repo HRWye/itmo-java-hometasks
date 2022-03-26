@@ -1,4 +1,4 @@
-package hw5;
+package ru.itmo.hometasks.hw5;
 import java.util.Scanner;
 public class Task4 {
     public static void main(String[] args) {

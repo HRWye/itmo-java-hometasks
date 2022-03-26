@@ -1,4 +1,4 @@
-package hw4;
+package ru.itmo.hometasks.hw4;
 import java.util.Arrays;
 public class Task5 {
     public static void main(String[] args) {

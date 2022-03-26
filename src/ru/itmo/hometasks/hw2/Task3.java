@@ -1,4 +1,4 @@
-package hw2;
+package ru.itmo.hometasks.hw2;
 public class Task3 {
     public static void main(String[] args) {
 /*

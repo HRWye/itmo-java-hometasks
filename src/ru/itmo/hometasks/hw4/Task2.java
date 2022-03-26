@@ -1,4 +1,4 @@
-package hw4;
+package ru.itmo.hometasks.hw4;
 import java.util.Arrays;
 import java.util.Collections;
 public class Task2 {

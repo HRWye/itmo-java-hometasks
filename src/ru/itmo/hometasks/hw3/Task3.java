@@ -1,4 +1,4 @@
-package hw3;
+package ru.itmo.hometasks.hw3;
 import java.util.Scanner;
 public class Task3 {
     public static void main(String[] args) {
