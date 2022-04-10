@@ -3,6 +3,8 @@ import java.util.*;
 
 public class MapTask {
 
+    // TODO:: написать статический метод, который принимает на вход мапу (firstTaskMap) и город (city)
+    //  и формирует список (List) логинов, которые соответствуют переданному городу
     public static List<String> listFromCityFormer(HashMap<String, String> someMap, String someCity){
         List<String> loginsOfCity = new ArrayList<>();
         for (Map.Entry<String, String> pair : someMap.entrySet()) {
@@ -13,6 +15,9 @@ public class MapTask {
         return loginsOfCity;
     }
 
+    // TODO:: дан список слов (words).
+    //  Написать статический метод, который будет возвращать количество одинаковых слов
+    //  в списке вида Map<String, Integer>, где String - слово и Integer - количество повторений
     public static HashMap<String, Integer> repeatWordsMapFormer(List<String> someList){
         HashMap<String, Integer> repeatWordsMap = new HashMap<>();
         for (String word : someList) {
@@ -29,6 +34,9 @@ public class MapTask {
         return repeatWordsMap;
     }
 
+    // TODO:: дана мапа (customerMap).
+    //  Написать статический метод, который принимает на вход аргументы int from и int to и возвращает
+    //  новую мапу, в которую войдут все покупатели, возраст которых находится в диапазоне [from, to)
     public static HashMap<String, Customer> ageCustomerMapFormer (HashMap<String, Customer> someMap, int from, int to){
         HashMap<String, Customer> ageCustomerMap = new HashMap<>();
         for (Map.Entry<String, Customer> customer : someMap.entrySet()) {
@@ -39,7 +47,7 @@ public class MapTask {
 
         return ageCustomerMap;
     }
-
+    // TODO:: Задания по тексту (text). На каждый пункт - минимум один метод (можно статический):
     /*1*/
     public static int frequencyOfSomeWordInSomeText(String someText, String someWord){
         List<String> listOfWords = new ArrayList<>(Arrays.asList(someText.split(" ")));
@@ -49,13 +57,14 @@ public class MapTask {
     /*2*/
     public static void wordGroupsByLengthFormer (String someText){
         List<String> listOfWords = new ArrayList<>(Arrays.asList(someText.split(" ")));
-        for (int i =1; i<13; i++){
+        for (int i =1; i<36; i++){
             List<String> specificListOfWords = new ArrayList<>();
             for (String word : listOfWords) {
                 if (word.length()==i&&!specificListOfWords.contains(word)){
                     specificListOfWords.add(word);
                 }
             }
+            if (specificListOfWords.isEmpty()) continue;
             System.out.println("Список слов содержащих букв в количестве "+i+": "+specificListOfWords);
             specificListOfWords.clear();
         }
