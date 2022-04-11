@@ -18,17 +18,11 @@ public class MapTask {
     // TODO:: дан список слов (words).
     //  Написать статический метод, который будет возвращать количество одинаковых слов
     //  в списке вида Map<String, Integer>, где String - слово и Integer - количество повторений
-    public static HashMap<String, Integer> repeatWordsMapFormer(List<String> someList){
+    public static HashMap<String, Integer> repeatWordsMapFormer(List<String> someList) {
         HashMap<String, Integer> repeatWordsMap = new HashMap<>();
         for (String word : someList) {
-            if (someList.indexOf(word)==0){
-                repeatWordsMap.put(word, Collections.frequency(someList,word));
-            } else {
-                for (Map.Entry<String, Integer> pair : repeatWordsMap.entrySet()) {
-                    if (!repeatWordsMap.containsKey(word)) {
-                        repeatWordsMap.put(word, Collections.frequency(someList, word));
-                    }
-                }
+            if (!repeatWordsMap.containsKey(word)) {
+                repeatWordsMap.put(word, Collections.frequency(someList, word));
             }
         }
         return repeatWordsMap;
@@ -70,6 +64,19 @@ public class MapTask {
         }
     }
 
+    /*3*/ //не доделана
+    public static void top10MostRepeatedWords (String someText){
+        List<String> listOfWords = new ArrayList<>(Arrays.asList(someText.split(" ")));
+        Map<Integer, String> sortedWords = new TreeMap<>();
+        for (String word : listOfWords) {
+            if (!sortedWords.containsValue(word)) {
+                sortedWords.put(Collections.frequency(listOfWords, word), word);
+            }
+        }
+        System.out.println(sortedWords);
+    }
+
+
     public static void main(String[] args) {
         // TODO:: написать статический метод, который принимает на вход мапу (firstTaskMap) и город (city)
         //  и формирует список (List) логинов, которые соответствуют переданному городу
@@ -100,7 +107,7 @@ public class MapTask {
         words.add("august");
         words.add("august");
 
-        //System.out.println("2 задача:\n"+repeatWordsMapFormer(words)+"\n");
+        System.out.println("2 задача:\n"+repeatWordsMapFormer(words)+"\n");
 
 
         // TODO:: дана мапа (customerMap).
@@ -137,6 +144,8 @@ public class MapTask {
 
         // TODO:: 3. написать метод, который выводит в консоль топ 10 самых частых слов
 
+        System.out.println("4 задача, 3 пункт: ");
+        top10MostRepeatedWords(text);
 
     }
 }
