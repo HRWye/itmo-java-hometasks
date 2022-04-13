@@ -19,6 +19,7 @@ public class MapTask {
     //  Написать статический метод, который будет возвращать количество одинаковых слов
     //  в списке вида Map<String, Integer>, где String - слово и Integer - количество повторений
     public static HashMap<String, Integer> repeatWordsMapFormer(List<String> someList) {
+        //int count = repeatWordsMapFormer.getOrDefault ("may", 0) ...
         HashMap<String, Integer> repeatWordsMap = new HashMap<>();
         for (String word : someList) {
             if (!repeatWordsMap.containsKey(word)) {
@@ -38,9 +39,9 @@ public class MapTask {
                 ageCustomerMap.put(customer.getKey(),customer.getValue());
             }
         }
-
         return ageCustomerMap;
     }
+
     // TODO:: Задания по тексту (text). На каждый пункт - минимум один метод (можно статический):
     /*1*/
     public static int frequencyOfSomeWordInSomeText(String someText, String someWord){
