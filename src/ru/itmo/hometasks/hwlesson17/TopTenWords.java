@@ -20,7 +20,7 @@ public class TopTenWords {
         //  В мапу должны войти только первые 10 по частоте встречаемости слов.
 
         List<String> listOfWords = new ArrayList<>(Arrays.asList(text.split(" ")));
-        //Map<String, Object> mapOfWords =listOfWords.stream().collect(Collectors.toMap(Function.identity(), elem->Collections.frequency(listOfWords,elem),(elem1,elem2)->elem1));
+        //Map<String, Integer> mapOfWords =listOfWords.stream().collect(Collectors.toMap(Function.identity(), elem->Collections.frequency(listOfWords,elem),(elem1,elem2)->elem1));
         Map<String, Long> mapOfWords =listOfWords.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
         mapOfWords.entrySet().stream().sorted(Map.Entry.<String,Long>comparingByValue().reversed()).limit(10).forEach(System.out::println);
     }
