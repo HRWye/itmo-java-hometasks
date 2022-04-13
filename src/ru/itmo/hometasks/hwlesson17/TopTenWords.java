@@ -22,6 +22,13 @@ public class TopTenWords {
         List<String> listOfWords = new ArrayList<>(Arrays.asList(text.split(" ")));
         //Map<String, Integer> mapOfWords =listOfWords.stream().collect(Collectors.toMap(Function.identity(), elem->Collections.frequency(listOfWords,elem),(elem1,elem2)->elem1));
         Map<String, Long> mapOfWords =listOfWords.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-        mapOfWords.entrySet().stream().sorted(Map.Entry.<String,Long>comparingByValue().reversed()).limit(10).forEach(System.out::println);
+        mapOfWords.entrySet().stream()
+                .sorted(/*(entry1, entry2)->entry2.getValue().compareTo(entry1.getValue()))*/Map.Entry.<String,Long>comparingByValue().reversed())
+                .limit(10)
+                //collect(Collectors.toMap(
+                //Map.Entry::getKey,//entry->entry.getKey()
+                //Map.Entry::getValue//entry.getValue()
+                //));
+                .forEach(System.out::println);
     }
 }
