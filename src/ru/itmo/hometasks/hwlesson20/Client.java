@@ -28,6 +28,9 @@ public class Client {
             System.out.println("Введите сообщение");
             //если сообщение exit, то выход из цикла
             messageText = scanner.nextLine();
+            if (messageText.equalsIgnoreCase("exit")||messageText.equalsIgnoreCase("/exit")){
+                return;
+            }
             sendAndPrintMessage(SimpleMessage.getMessage(name, messageText));
         }
     }
